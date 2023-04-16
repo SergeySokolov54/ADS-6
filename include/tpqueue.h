@@ -8,7 +8,7 @@ class TPQueue {
  private:
     T* arr;
     char head, tail, length;
-    
+
  public:
     TPQueue() : head(0), tail(0), length(0) { arr = new T[size]; }
     bool isEmpty() const {
