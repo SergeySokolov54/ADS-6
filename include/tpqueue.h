@@ -1,14 +1,16 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
+#include <string>
 
 template<typename T, int size>
 class TPQueue {
  private:
-    T arr[size];
+    T* arr;
     char head, tail, length;
+    
  public:
-    TPQueue() : head(0), tail(0), length(0){}
+    TPQueue() : head(0), tail(0), length(0) { arr = new T[size]; }
     bool isEmpty() const {
         return 0 == length;
     }
